@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #cbd5f5;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: #38bdf8;
+    color: #020617;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #0ea5e9;
+}
+
+/* Sections */
+.section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.light {
+    background: #020617;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #020617;
+    padding: 25px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(56,189,248,0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Contact */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0ea5e9;
+}
+
+#msg {
+    margin-top: 15px;
+    color: #22c55e;
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+}

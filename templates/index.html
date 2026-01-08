@@ -1,6 +1,75 @@
-<h1> Input your text below:</h1>
-<form action="counter">
-  <textarea name="words" rows = "25" cols="100">
-  </textarea> <br>
-  <input type="submit"/>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCI GENESIS Coaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="logo">SCI<span>GENESIS</span></div>
+    <nav>
+        <a href="{% static '#home' %}">Home</a>
+        <a href="{% static '#courses' %}">Courses</a>
+        <a href="{% static '#about' %}">About</a>
+        <a href="{% static '#contact' %}">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    {% if user.is_authenticated %}
+    <h1>Welcome, {{user.username}}</h1>
+    {% else %}
+     <h1>Welcome, Please Login</h1>
+     {% endif %}
+    <p>Build strong concepts. Score higher. Shape your future.</p>
+    <button onclick="scrollToContact()">Enroll Now</button>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="section">
+    <h2>Our Courses</h2>
+    <div class="cards">
+        {% for feature in features %}
+        <div class="card">
+            <h3><features class="name">{{feature.name}}</features></h3>
+            <p><features class="details"></features>{{feature.details}}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section light">
+    <h2>Why Choose Us?</h2>
+    <p>
+        {{feature.details}}, small batches, doubt-clearing sessions,
+        and regular tests to track student progress.
+    </p>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm()">
+        <input type="text" placeholder="Student Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Class (11 or 12)" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="msg"></p>
+</section>
+
+<footer>
+    <p>© 2026 SCIGENESIS Coaching | All Rights Reserved</p>
+</footer>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
